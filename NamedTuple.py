@@ -1,3 +1,4 @@
+# idea from talkpython.fm
 import collections
 
 Rating = collections.namedtuple("Rating", "id, x, y, rating")
