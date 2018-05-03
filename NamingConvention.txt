@@ -1,0 +1,13 @@
+taken from talkpython
+
+Modules: short all lowercase names
+
+Constants (module level): all uppercase
+
+Classes: CapWord style (Pascal case)
+
+Variables and arguments: lowercase possibly separated by underscore
+
+Functions: lowercase possibly separated by underscore
+
+Custom exceptions classes are post-fixed with Error like: CommunicationError(Exception): pass
