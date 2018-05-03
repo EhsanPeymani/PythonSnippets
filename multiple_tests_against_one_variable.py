@@ -10,7 +10,7 @@ def less_pythonic_approach(move: str):
 
 
 def more_pythonic_approach(move: str):
-    direct_moves = [Move.South, Move.North, Move.East, Move.West]
+    direct_moves = {Move.South, Move.North, Move.East, Move.West}
 
     if move in direct_moves:
         print('This is a direct move.')
