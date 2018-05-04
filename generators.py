@@ -25,10 +25,11 @@ def even_fib():
         yield item
 
 
-for item in even_fib():
-    print(item, end=', ')
-    time.sleep(0.5)
-    sys.stdout.flush()
+if __name__ == '__main__':
+    for item in even_fib():
+        print(item, end=', ')
+        time.sleep(0.5)
+        sys.stdout.flush()
 
-    if item > 20000:
-        break
+        if item > 20000:
+            break
