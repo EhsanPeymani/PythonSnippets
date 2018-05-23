@@ -1,5 +1,5 @@
 # talkpython.fm
-# create a generator for fibionachi series\
+# create a generator for fibonacci series\
 # later we create another generator which returns even numbers
 # using these 2 generators we create a pipeline
 import time
@@ -26,6 +26,7 @@ def even_fib():
 
 
 if __name__ == '__main__':
+    print('fibonacci even numbers less than 2000 ...\n')
     for item in even_fib():
         print(item, end=', ')
         time.sleep(0.5)

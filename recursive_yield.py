@@ -15,8 +15,9 @@ def get_files(path_to_folder):
 
         elif os.path.isdir(full_path):
             # recursion
-            get_files(full_path)
+            yield from get_files(full_path)
 
 
 folder = 'D:\Git\ChangeManagementTool\ChangeManagementTool'
-get_files(folder)
+for file in get_files(folder):
+    print(file)

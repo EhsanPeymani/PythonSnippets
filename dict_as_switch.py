@@ -41,6 +41,7 @@ class Move(Enum):
         text = text.strip().lower()
 
         # dictionary as switch case
+        # use functions for values
         care_dict = {
             'n': lambda: print('North. Very Dangerous'),
             's': lambda: print('South. Make sure this is the right direction')

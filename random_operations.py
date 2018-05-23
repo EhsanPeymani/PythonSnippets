@@ -9,6 +9,7 @@ def pick_randomly_nonpythonic(text: str):
     index = random.randint(0, len(text)-1)
     return text[index]
 
+
 if s:
     print(pick_randomly_nonpythonic(s))
 
@@ -19,7 +20,7 @@ if s:
 
 
 
-# shuffling the string s using random.sample
+# shuffling the string s using random.sample - sample returns a list
 shuffled_list = random.sample(s, len(s))
 print(''.join(shuffled_list))
 
@@ -28,8 +29,6 @@ print(''.join(shuffled_list))
 # sampling 5 characters from the string s
 sampled = random.sample(s, 5)
 print('sampled', sampled)
-
-
 
 
 # shuffling the string s using random.shuffle

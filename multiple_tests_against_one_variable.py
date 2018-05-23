@@ -48,6 +48,7 @@ class Move(Enum):
 
         text = text.strip().lower()
 
+        # see dict_as_switch.py for a neater approach
         if text == 'w':
             return Move.West
         if text == 'e':

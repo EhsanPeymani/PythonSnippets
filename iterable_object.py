@@ -2,11 +2,18 @@
 # the idea is to create ShoppingCart class, which is iterable; you can iterate over the list of items in a for loop
 # later, you create ShoppingCartSorted class, which is iterable but sorted based on the price property of CartItem.
 
+
+class CartItem:
+    def __init__(self, name, price):
+        self.price = price
+        self.name = name
+
+
 class ShoppingCart:
     def __init__(self):
         self.items = []
 
-    def add_item(self, it):
+    def add_item(self, it: CartItem):
         self.items.append(it)
 
     def __iter__(self):
@@ -21,10 +28,7 @@ class ShoppingCartSorted(ShoppingCart):
             yield i
 
 
-class CartItem:
-    def __init__(self, name, price):
-        self.price = price
-        self.name = name
+
 
 
 # iterate over a ShoppingCart object
@@ -53,5 +57,5 @@ for item in cart_sorted:
 # what if it was to be sorted?
 
 # print("Items in your cart.")
-# for item in cart:
-#     print(" * {} ${}".format(item.name, item.price))
+for item in cart:
+    print(" * {} ${}".format(item.name, item.price))
