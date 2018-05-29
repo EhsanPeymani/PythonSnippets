@@ -6,11 +6,11 @@ class MyClass:
 
     # to access private fields, make a property
     @property
-    def MyPrivateField(self):
+    def myprivatefield(self):
         return self.__private
 
-    @MyPrivateField.setter
-    def MyPrivateField(self, value):
+    @myprivatefield.setter
+    def myprivatefield(self, value):
         self.__private = value
 
 
@@ -21,5 +21,5 @@ if __name__ == '__main__':
     print('My Protected Attribute is {} to encourage users not to use it out of the class.'.format(c._protected))
     print('My Private Attribute is Not Accessible Here.')
 
-    c.MyPrivateField = 'Updated Here'
-    print('My Private Attribute is accessible throu the property: {}'.format(c.MyPrivateField))
+    c.myprivatefield = 'Updated Here'
+    print('My Private Attribute is accessible throu the property: {}'.format(c.myprivatefield))
