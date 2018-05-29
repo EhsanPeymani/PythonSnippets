@@ -34,7 +34,7 @@ class Move(Enum):
         return parse_dict.get(text, None)
 
     @staticmethod
-    def carful_selection(text: str):
+    def careful_selection(text: str):
         if not text:
             return None
 
@@ -51,12 +51,10 @@ class Move(Enum):
         return action()
 
 
-
-
 print('n:', Move.parse('n'))
 print('ns:', Move.parse('ns'))
 
 
-Move.carful_selection('n')
-Move.carful_selection('s')
-Move.carful_selection('nz')
+Move.careful_selection('n')
+Move.careful_selection('s')
+Move.careful_selection('nz')
