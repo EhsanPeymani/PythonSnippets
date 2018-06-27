@@ -16,7 +16,9 @@ try:
         data = resp.json()
 
         for movie in data['Search']:
-            print('* {}'.format())
+            print('* {}'.format(movie['Title']))
+
+    resp.close()
 
 except Exception as e:
     print('something goes wrong: {}'.format(e))
