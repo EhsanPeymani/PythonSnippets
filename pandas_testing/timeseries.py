@@ -15,6 +15,9 @@ data.set_index('timestamp', inplace=True)
 # improving column names
 data.columns = ['temp', 'percip']
 
+# saving to a new csv file
+data.to_csv('weatherDataFixed.csv')
+
 print('---------------- data dataframe ----------------')
 print(data.head(2))
 
