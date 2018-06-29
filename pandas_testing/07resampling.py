@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 data = pd.read_csv('weatherDataFixed.csv', index_col='timestamp', parse_dates=True)
 
@@ -22,3 +23,11 @@ print(every3D_min_temp)
 hourly_data = data.resample('15min').ffill()
 print('--- every15min up sampling to have finer grids ---')
 print(hourly_data.head(10))
+
+# rolling mean - moving average
+temp_original = data['temp']
+temp_averaged_24h = temp_original.rolling(window=24).mean()
+print(temp_averaged_24h.dtype)
+new_df = {temp_org:temp_original, temp_avg:temp_averaged_24h}
+new_df.plot()
+plt.show()
